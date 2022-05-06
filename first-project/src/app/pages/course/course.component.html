@@ -1,0 +1,10 @@
+<p>List of courses on the portal: <a href="{{getUrl()}}" target="_blank">{{getUrl()}}</a></p>
+
+<div>
+  <ul *ngFor="let course of getCourses()">
+    <li>{{course}}</li>
+  </ul>
+</div>
+
+<app-course-details></app-course-details>
+
