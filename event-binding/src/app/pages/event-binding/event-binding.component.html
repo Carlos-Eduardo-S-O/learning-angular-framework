@@ -1,0 +1,28 @@
+<article>
+  <h3>Event binding</h3>
+  <div>
+    <input type="text"
+    (keyup)="onKeyUp($event)"
+    (keyup.enter)="saveValue($event.target)"
+    (blur)="saveValue(fieldInput)"
+    #fieldInput
+    >
+    <br/>
+
+    <button (click)="clickedButton()">
+      Click me
+    </button>
+    <br/>
+
+    <p>Valor atual {{getInputValue()}}</p>
+    <p>Valor salvo {{getInputStringValue()}}</p>
+
+    <span style="padding: 5px"
+    [style.color]="getIsTheMouseOver() ? 'red': 'green'"
+    (mouseover)="mouseOver()"
+    (mouseout)="mouseOut()"
+    >
+      Pass the mouse over me
+    </span>
+  </div>
+</article>

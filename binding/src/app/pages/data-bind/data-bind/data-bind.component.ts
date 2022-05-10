@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-data-bind',
@@ -11,7 +12,9 @@ export class DataBindComponent implements OnInit {
   private url: string = 'http://loiane.com';
   private imageUrl: string = 'http://lorempixel.com.br/500/400/?1';
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }

@@ -41,5 +41,9 @@
     <div class="alert alert-danger"
     [class.alert-danger]="class.value == 'alert-danger'"
     >Danger</div>
+    <div class="alert {{ class.value }}"
+    [style.display]="class.value == 'alert-danger' ? 'block': 'none'"
+    >Error, please try again later</div>
   </article>
+
 </section>

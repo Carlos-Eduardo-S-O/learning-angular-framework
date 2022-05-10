@@ -8,7 +8,7 @@ import { DataBindComponent } from './pages/data-bind/data-bind/data-bind.compone
 @NgModule({
   declarations: [
     AppComponent,
-    DataBindComponent
+    DataBindComponent,
   ],
   imports: [
     BrowserModule,
