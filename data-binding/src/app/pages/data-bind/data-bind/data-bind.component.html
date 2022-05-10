@@ -1,0 +1,42 @@
+<section class="preperty-binding">
+
+  <article>
+    <h3>Interpolation</h3>
+    <p>String that will be redeemed <a href="{{ getUrl() }}">{{ getUrl() }}</a></p>
+    <p>1 + 1 = {{ 1 + 1 }}</p>
+  </article>
+
+  <article>
+    <h3>Property Binding</h3>
+    <!--
+    <img src="{{ getUrlImage() }}" alt="Nature">
+
+    <img [src]="getUrlImage()">
+    <img bind-src="getUrlImage()">
+  -->
+  </article>
+
+  <article>
+    <h3>Class ans Style</h3>
+    Select a class:
+    <select #class (change)="0">
+      <option value="">Select</option>
+      <option value="alert-success">Success</option>
+      <option value="alert-info">Info</option>
+      <option value="alert-warning">Warning</option>
+      <option value="alert-danger">Danger</option>
+    </select>
+
+    <div class="alert"
+    [class.alert-success]="class.value == 'alert-success'"
+    >Success</div>
+    <div class="alert"
+    [class.alert-info]="class.value == 'alert-info'">Info</div>
+    <div class="alert"
+    [class.alert-warning]="class.value == 'alert-warning'"
+    >Warning</div>
+    <div class="alert alert-danger"
+    [class.alert-danger]="class.value == 'alert-danger'"
+    >Danger</div>
+  </article>
+</section>
