@@ -9,6 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class TwoWayDataBindingComponent implements OnInit {
   name: string = 'abc';
 
+  person: any = {
+    name: '',
+    lastName: '',
+    age: undefined
+  }
+
   constructor(private n: TwoWayDataBindingServiceService) {
     this.name = n.getName();
   }

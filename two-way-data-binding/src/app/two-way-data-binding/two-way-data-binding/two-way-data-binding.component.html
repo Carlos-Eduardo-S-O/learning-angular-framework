@@ -16,7 +16,33 @@
 
     <input type="text" bindon-ngModel="name">
 
-    <p>You've typed: {{ getName() }}</p>
+    <input type="text" />
+    <p>You've typed: {{ getName() }} </p>
+  </div>
+
+  <div>
+    <h1>Fill out the form bellow</h1>
+    <input
+    type="text"
+    placeholder="Enter your name"
+    [(ngModel)]="person.name"
+    >
+    <input
+    type="text"
+    placeholder="Enter your last name"
+    [(ngModel)]="person.lastName"
+    >
+    <input
+    type="number"
+    placeholder="Enter your age"
+    [(ngModel)]="person.age"
+    >
+
+    <div>
+      <p>Your name: {{person.name}}</p>
+      <p>Your last Name: {{person.lastName}}</p>
+      <p>Your age: {{person.age}}</p>
+    </div>
   </div>
 </article>
 
