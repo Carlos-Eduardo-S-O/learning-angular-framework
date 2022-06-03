@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'reusing-components';
+
+  onChangedCounter(value: any): void{
+    console.log(value)
+  }
 }
