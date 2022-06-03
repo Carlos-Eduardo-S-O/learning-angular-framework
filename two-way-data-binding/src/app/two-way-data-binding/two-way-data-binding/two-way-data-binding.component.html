@@ -1,0 +1,23 @@
+<section>
+<article>
+  <h3>Two-way-data-binding</h3>
+  <div>
+    <input type="text"
+    [value]="getName()"
+    (input)="setName($event.target)"
+    />
+
+    <input type="text"
+    [ngModel]="getName()"
+    (ngModelChange)="setName($event)"
+    />
+
+    <input type="text" [(ngModel)]="name"/>
+
+    <input type="text" bindon-ngModel="name">
+
+    <p>You've typed: {{ getName() }}</p>
+  </div>
+</article>
+
+</section>

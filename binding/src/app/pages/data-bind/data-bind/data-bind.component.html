@@ -44,6 +44,12 @@
     <div class="alert {{ class.value }}"
     [style.display]="class.value == 'alert-danger' ? 'block': 'none'"
     >Error, please try again later</div>
+
+    <input type="text"
+      [value]="name"
+      (input)="setName($event.target)"
+    >
+    <p>{{name}}</p>
   </article>
 
 </section>
