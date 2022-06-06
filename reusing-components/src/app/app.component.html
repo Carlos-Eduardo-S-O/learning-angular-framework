@@ -5,5 +5,5 @@
 
 <div>
   <h1>Output property</h1>
-  <app-counter (valueHasChanged)="onChangedCounter($event.newValue)"></app-counter>
+  <app-counter (changed)="onChanged()" (valueHasChanged)="onChangedCounter($event.newValue)"></app-counter>
 </div>

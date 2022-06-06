@@ -11,4 +11,8 @@ export class AppComponent {
   onChangedCounter(value: any): void{
     console.log(value)
   }
+
+  onChanged(): void{
+    console.log('changed');
+  }
 }
