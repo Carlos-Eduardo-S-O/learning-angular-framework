@@ -31,18 +31,18 @@
       <p>Text with the color of the combobox value selected</p>
     </div>
     <div class="alert"
-    [class.alert-success]="class.value == 'alert-success'"
+    [class.alert-success]="class.value === 'alert-success'"
     >Success</div>
     <div class="alert"
-    [class.alert-info]="class.value == 'alert-info'">Info</div>
+    [class.alert-info]="class.value === 'alert-info'">Info</div>
     <div class="alert"
-    [class.alert-warning]="class.value == 'alert-warning'"
+    [class.alert-warning]="class.value === 'alert-warning'"
     >Warning</div>
     <div class="alert alert-danger"
-    [class.alert-danger]="class.value == 'alert-danger'"
+    [class.alert-danger]="class.value === 'alert-danger'"
     >Danger</div>
     <div class="alert {{ class.value }}"
-    [style.display]="class.value == 'alert-danger' ? 'block': 'none'"
+    [style.display]="class.value === 'alert-danger' ? 'block': 'none'"
     >Error, please try again later</div>
 
     <input type="text"

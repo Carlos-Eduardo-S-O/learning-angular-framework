@@ -1,12 +1,17 @@
 import { TwoWayDataBindingServiceService } from './../two-way-data-binding-service.service';
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  // OnInit
+} from '@angular/core';
 
 @Component({
-  selector: 'two-way-data-binding',
+  selector: 'app-two-way-data-binding',
   templateUrl: './two-way-data-binding.component.html',
   styleUrls: ['./two-way-data-binding.component.scss']
 })
-export class TwoWayDataBindingComponent implements OnInit {
+export class TwoWayDataBindingComponent
+// implements OnInit
+{
   name: string = 'abc';
 
   person: any = {
@@ -19,8 +24,8 @@ export class TwoWayDataBindingComponent implements OnInit {
     this.name = n.getName();
   }
 
-  ngOnInit(): void {
-  }
+  // ngOnInit(): void {
+  // }
 
   setName(input: any): void{
     // if(input.value !== undefined){

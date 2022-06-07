@@ -1,26 +1,32 @@
 import { InputPropertyService } from './input-property-service/input-property-service.service';
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  // OnInit
+} from '@angular/core';
 
 @Component({
   selector: 'app-courses',
   templateUrl: './input-property.component.html',
   styleUrls: ['./input-property.component.scss'],
-  inputs: ['teacherName:teacher']
+  //inputs: ['teacherName:teacher'] removed because of lint
 })
-export class InputPropertyComponent implements OnInit {
+export class InputPropertyComponent
+// implements OnInit
+{
   name: string = '';
   course: string = '';
   teacherName: string ='';
 
-  @Input('hours') courseHours: number = 0
+  @Input() courseHours: number = 0
 
   constructor(private server: InputPropertyService) {
     this.name = server.getName(),
     this.course = server.gerCourse()
   }
 
-  ngOnInit(): void {
-  }
+  // ngOnInit(): void {
+  // }
   getTeacherName(): string{
     return this.teacherName;
   }

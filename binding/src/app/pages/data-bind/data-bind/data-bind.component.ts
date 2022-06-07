@@ -16,6 +16,7 @@ export class DataBindComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    console.log("started")
   }
 
   setName(event: any): void{

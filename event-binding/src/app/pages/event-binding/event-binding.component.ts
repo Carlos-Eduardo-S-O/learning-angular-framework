@@ -1,18 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,
+  // OnInit
+} from '@angular/core';
 
 @Component({
   selector: 'app-event-binding',
   templateUrl: './event-binding.component.html',
   styleUrls: ['./event-binding.component.scss']
 })
-export class EventBindingComponent implements OnInit {
+export class EventBindingComponent
+// implements OnInit
+ {
   private inputValue: string = '';
   private inputStringValue: any = '';
   private isTheMouseOver: boolean = false;
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  // ngOnInit(): void {
+  // }
 
   clickedButton(): void{
     alert("The button was clicked!!!");

@@ -1,7 +1,7 @@
 import {
   Component,
   Input,
-  OnInit,
+  // OnInit,
   EventEmitter,
   Output,
   ViewChild,
@@ -12,9 +12,11 @@ import {
   selector: 'app-counter',
   templateUrl: './output-property.component.html',
   styleUrls: ['./output-property.component.scss'],
-  outputs: ['changed']
+  //outputs: ['changed'] removed because of the eslint
 })
-export class OutputPropertyComponent implements OnInit {
+export class OutputPropertyComponent
+// implements OnInit
+{
 
   @Input() counter: number = 0;
   @Output() valueHasChanged = new EventEmitter;
@@ -25,8 +27,8 @@ export class OutputPropertyComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  // ngOnInit(): void {
+  // }
 
   getCounter(): number{
     return this.counter;

@@ -8,7 +8,7 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 export class LifeCycleComponent implements
 OnInit,
 OnChanges,
-DoCheck,
+// DoCheck,
 AfterContentInit,
 AfterContentChecked,
 AfterViewInit,
@@ -23,7 +23,7 @@ OnDestroy{
 
   ngOnChanges(): void { this.log("ngOnChanges") }
 
-  ngDoCheck(): void { this.log("ngDoCheck") }
+  // ngDoCheck(): void { this.log("ngDoCheck") } // removed because of eslint
 
   ngAfterContentInit(): void { this.log("ngAfterContentInit") }
 
