@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularDirectives';
+  private currentSelectedTab: string = "home";
+
+  setCurrentSelectedTab(tabName: string): void{
+    this.currentSelectedTab = tabName;
+  }
+
+  areTheTabsNamesEqual(tabNameToBeCompared:string, currentTabName: string): boolean{
+    return tabNameToBeCompared === currentTabName;
+  }
+
+  getCurrentSelectedTab(): string{
+    return this.currentSelectedTab;
+  }
 }

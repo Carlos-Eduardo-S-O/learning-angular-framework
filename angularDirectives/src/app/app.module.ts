@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgIfDirectiveComponent } from './ng-if-directive/ng-if-directive.component';
+import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NgIfDirectiveComponent
+    NgIfDirectiveComponent,
+    NgSwitchComponent
   ],
   imports: [
     BrowserModule,

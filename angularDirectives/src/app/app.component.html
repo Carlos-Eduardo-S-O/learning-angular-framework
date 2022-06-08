@@ -1,6 +1,24 @@
 <nav class="navbar bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand">Navbar</a>
+    <a class="navbar-brand nav-link">What's up</a>
+    <a
+      class="navbar-brand nav-link link"
+      [class.active]="areTheTabsNamesEqual('home', getCurrentSelectedTab())"
+      (click)="setCurrentSelectedTab('home')"
+    >Home</a>
+
+    <a
+      class="navbar-brand nav-link link"
+      [class.active]="areTheTabsNamesEqual('map', getCurrentSelectedTab())"
+      (click)="setCurrentSelectedTab('map')"
+    >Map</a>
+
+    <a
+    class="navbar-brand nav-link link"
+    [class.active]="areTheTabsNamesEqual('list', getCurrentSelectedTab())"
+    (click)="setCurrentSelectedTab('list')"
+    >List</a>
+
     <form class="d-flex" role="search">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success" type="submit">Search</button>
@@ -8,4 +26,12 @@
   </div>
 </nav>
 
-<app-ng-if-directive></app-ng-if-directive>
+<div id="container" [ngSwitch]="getCurrentSelectedTab()">
+  <p *ngSwitchCase="'home'">Home mode activated</p>
+  <p *ngSwitchDefault="'home'">Home mode activated</p>
+  <p *ngSwitchCase="'map'">Map mode activated</p>
+  <p *ngSwitchCase="'list'">List mode activated</p>
+</div>
+<!--
+  <app-ng-if-directive></app-ng-if-directive>
+-->
