@@ -1,3 +1,4 @@
+import { NgIfDirectiveService } from './ng-if-directive/services/ng-if-directive.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,7 +15,7 @@ import { NgIfDirectiveComponent } from './ng-if-directive/ng-if-directive.compon
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [NgIfDirectiveService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

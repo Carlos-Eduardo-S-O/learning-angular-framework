@@ -1,3 +1,4 @@
+import { NgIfDirectiveService } from './services/ng-if-directive.service';
 import {
   Component,
   //OnInit
@@ -11,10 +12,20 @@ import {
 export class NgIfDirectiveComponent
 //implements OnInit
 {
+  private courses: string[];
 
-  constructor() { }
+  constructor(private ngIfService: NgIfDirectiveService) {
+    this.courses = ngIfService.getCourses();
+    //this.courses = []
+  }
 
   // ngOnInit(): void {
   // }
+  isTheCourseListEmpty(): boolean{
+    return this.courses.length > 0 ? true: false
+  }
 
+  getCourses(): string[] {
+    return this.courses;
+  }
 }

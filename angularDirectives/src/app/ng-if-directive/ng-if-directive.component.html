@@ -1,1 +1,17 @@
-<p>ng-if-directive works!</p>
+<div *ngIf="isTheCourseListEmpty()">
+  <p>{{getCourses()}}</p>
+</div>
+
+<div *ngIf="!isTheCourseListEmpty()">
+  <p>There is no any course available now, please check again later!!!</p>
+</div>
+
+<!-- A good performance alternative is using the property hidden from html-->
+
+<div [hidden]="!isTheCourseListEmpty()">
+  <p>{{getCourses()}}</p>
+</div>
+
+<div [hidden]="isTheCourseListEmpty()">
+  <p>There is no any course available now, please check again later!!!</p>
+</div>
