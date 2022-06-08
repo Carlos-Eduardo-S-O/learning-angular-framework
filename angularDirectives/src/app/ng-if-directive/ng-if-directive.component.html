@@ -1,15 +1,15 @@
-<div *ngIf="isTheCourseListEmpty()">
+<!-- <div *ngIf="isTheCourseListEmpty()">
   <p>{{getCourses()}}</p>
 </div>
 
 <div *ngIf="!isTheCourseListEmpty()">
   <p>There is no any course available now, please check again later!!!</p>
-</div>
+</div> -->
 
 <!-- A good performance alternative is using the property hidden from html-->
 
 <div [hidden]="!isTheCourseListEmpty()">
-  <p>{{getCourses()}}</p>
+  <app-ng-for [courses]="getCourses()"></app-ng-for>
 </div>
 
 <div [hidden]="isTheCourseListEmpty()">

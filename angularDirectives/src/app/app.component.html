@@ -30,8 +30,9 @@
   <p *ngSwitchCase="'home'">Home mode activated</p>
   <p *ngSwitchDefault="'home'">Home mode activated</p>
   <p *ngSwitchCase="'map'">Map mode activated</p>
-  <p *ngSwitchCase="'list'">List mode activated</p>
+  <app-ng-if-directive *ngSwitchCase="'list'"></app-ng-if-directive>
 </div>
+
 <!--
   <app-ng-if-directive></app-ng-if-directive>
 -->
