@@ -20,6 +20,6 @@ export class NgClassComponent implements OnInit {
 
   getStarShape(): boolean {
     return this.starMode;
-  }
+  }//
 
 }
