@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { NgIfDirectiveComponent } from './ng-if-directive/ng-if-directive.component';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { NgForComponent } from './ng-for/ng-for.component';
+import { NgClassComponent } from './ng-class/ng-class.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgIfDirectiveComponent,
     NgSwitchComponent,
-    NgForComponent
+    NgForComponent,
+    NgClassComponent
   ],
   imports: [
     BrowserModule,

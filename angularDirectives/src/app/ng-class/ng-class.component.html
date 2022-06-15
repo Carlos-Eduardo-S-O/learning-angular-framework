@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+<h1
+(click)="switchStarShape()"
+[style.border]="'2px solid #ffff00'"
+[style]="
+'
+border-radius: 100px;
+width: 100px;
+height: 100px;
+'
+"
+>
+  <i
+    (click)="switchStarShape()"
+    [class.bi-star]="getStarShape()"
+    [class.bi-star-fill]="!getStarShape()"
+    [style.color]="'red'"
+    class="bi"
+  ></i>
+
+  <i
+    (click)="switchStarShape()"
+    [style.color]="'red'"
+    class="bi"
+    [ngClass]="{
+    'bi-star': getStarShape(),
+    'bi-star-fill': !getStarShape()
+    }"
+  ></i>
+</h1>
